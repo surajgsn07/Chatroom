@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(172, 183, 192);
+        }
+        .outgoing{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-end;
+            margin: 5px; /* Right alignment */
+            
+        }
+        .incoming{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-start;
+            margin: 5px; /* Right alignment */
+
+        }
+        .message_area{
+            /* background-color: red; */
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            overflow-x: hidden;
+            height: 79%;
+        }
+    </style>
+</head>
+<body>
+    <section style="background-color: rgb(99, 126, 150); position: relative; height: 90vh; border: 1px solid black; width:60vw; border-radius: 20px;margin: 20px auto; overflow: hidden; ">
+        <div class="brand" style="display: flex; width: 100%; ">
+            <img src="ima.webp" style="" width="60px" alt="">
+            <h1>Chat-App</h1>
+        </div>
+        
+        <div class="message_area"  style="width: 100%; background-color: rgb(213, 216, 219);">
+            
+        </div>
+        <div style="position: absolute; bottom: 0%; width: 95%;  ">
+            <input  type="text" style="padding: 10px; border-radius: 20px; width: 100%;" name="" id="textarea" cols=""  rows="1" placeholder="Write your message"></input>
+        </div>
+
+    </section>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+</body>
+</html>
